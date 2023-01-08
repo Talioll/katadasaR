@@ -38,25 +38,24 @@ HapusAkhiranIAnKan <- function(kata) {
 
   if ( grepl("(kan)$", kata) ) {
     kata1 <- sub("(an)$", "", kata)
-
+    
     if ( is_katadasar(kata1) ) {
-      kata <- kata1
+      return(kata1)
     }
   }
 
-  ifelse ( grepl("(kan)$", kata) ) {
+  if ( grepl("(kan)$", kata) ) {
     kata2 <- sub("(kan)$", "", kata)
-
     if ( is_katadasar(kata2) ) {
-      kata <- kata2
+      return(kata2)
     }
   }
 
-  ifelse ( grepl("(i|[^k]an)$", kata) ) {
+  if ( grepl("(i|[^k]an)$", kata) ) {
     kata3 <- sub("(i|an)$", "", kata)
 
     if ( is_katadasar(kata3) ) {
-      kata <- kata3
+      return(kata3)
     }
   }
 
