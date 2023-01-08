@@ -44,7 +44,7 @@ HapusAkhiranIAnKan <- function(kata) {
     }
   }
 
-  if ( grepl("(kan)$", kata) ) {
+  else if ( grepl("(kan)$", kata) ) {
     kata2 <- sub("(kan)$", "", kata)
 
     if ( is_katadasar(kata2) ) {
@@ -52,7 +52,7 @@ HapusAkhiranIAnKan <- function(kata) {
     }
   }
 
-  if ( grepl("(i|[^k]an)$", kata) ) {
+  else if ( grepl("(i|[^k]an)$", kata) ) {
     kata3 <- sub("(i|an)$", "", kata)
 
     if ( is_katadasar(kata3) ) {
