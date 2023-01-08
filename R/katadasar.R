@@ -51,13 +51,10 @@ katadasaR <- function(kata, kamus=NULL) {
 
   kata0 <- kata
 
-  if ( is_katadasar(kata, kamus) ) {
+  if ( is_katadasar(kata, kamus) | kata == 'kai') {
 
     return(kata)
 
-  } else if(kata == 'kai') {
-    return(kata)
-    
   } else {
 
     kata <- HapusAkhiran(kata)
@@ -87,6 +84,4 @@ katadasaR <- function(kata, kamus=NULL) {
 }
 
 katadasar <- katadasaR
-
-katadasaR("kembalikan")
 
