@@ -4,7 +4,7 @@ HapusAwalanPe <- function(kata) {
 
   if ( grepl("^pe", kata) ) {
 
-    if ( grepl("^pe[wy]", kata) ) {
+    if ( grepl("^pe[lwy]", kata) ) {
 
       kata1 <- sub("^pe", "", kata)
       if ( is_katadasar(kata1) ) {
